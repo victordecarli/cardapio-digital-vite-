@@ -1,0 +1,257 @@
+:root {
+  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: #242424;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+a {
+  font-weight: 500;
+  color: #646cff;
+  text-decoration: inherit;
+}
+a:hover {
+  color: #535bf2;
+}
+
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+#app {
+  width: 100%;
+}
+
+.card {
+  padding: 2em;
+}
+
+.read-the-docs {
+  color: #888;
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    color: #213547;
+    background-color: #ffffff;
+  }
+  a:hover {
+    color: #747bff;
+  }
+  button {
+    background-color: #f9f9f9;
+  }
+}
+
+.localizacao {
+  max-width: 1390px;
+  margin: 0 auto;
+}
+
+.localizacao-container {
+  min-height: 100vh;
+  background: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 40px 0;
+}
+
+.localizacao-titulo {
+  font-size: 2.2rem;
+  font-family: poppins, sans-serif;
+  font-weight: bold;
+  margin-bottom: 24px;
+  color: #222;
+  text-align: center;
+}
+
+.localizacao-descricao {
+  margin-bottom: 32px;
+  font-family: 'Inter', sans-serif;
+  color: #444;
+  text-align: center;
+  max-width: 600px;
+}
+
+.localizacao-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 32px;
+  width: 100%;
+}
+
+@media (min-width: 768px) {
+  .localizacao-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.localizacao-card {
+  background: #fafafa;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.2s;
+}
+
+.localizacao-card:hover {
+  transform: translateY(-4px) scale(1.02);
+}
+
+.localizacao-img {
+  width: 100%;
+  height: 190px;
+  object-fit: cover;
+}
+
+.localizacao-card-conteudo {
+  padding: 20px;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.localizacao-nome {
+  font-size: 1.2rem;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+  color: #222;
+  margin-bottom: 8px;
+}
+
+.localizacao-endereco {
+  color: #666;
+  font-family: 'Inter', sans-serif;
+  margin-bottom: 6px;
+}
+
+.localizacao-distancia {
+  font-size: 0.95rem;
+  font-family: 'Inter', sans-serif;
+  color: #ff9800;
+  font-weight: 500;
+}
+
+/* Navbar Styles */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background-color: rgba(26, 26, 26, 0.8);
+  backdrop-filter: blur(10px);
+  border-radius: 8px;
+  margin-bottom: 2rem;
+}
+
+
+.navbar-links {
+  display: flex;
+  gap: 2rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar-links a {
+  color: rgba(255, 255, 255, 0.87);
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  transition: background 0.4s;
+}
+
+.navbar-links a:hover {
+   background: #ffffff10;
+}
+
+.navbar-links a.active {
+  color:#242424;
+  background: #ffcc00;
+}
+
+
+/* Container */
+.container {
+  max-width: 1200px;
+  min-height: 100vh;
+  padding: 2rem;
+}
+
+/* Sections */
+.about, .cardapio, .sobre, .localizacao, .contato {
+  text-align: left;
+}
+
+/* Footer Styles */
+.footer {
+  display: flex;
+  padding: 1em;
+  background-color: rgba(26, 26, 26, 0.8);
+  backdrop-filter: blur(10px);
+  border-radius: 8px;
+}
+
+.footer-span {
+  margin: auto;
+  text-align: center;
+}
+
+.logo {
+  width: 100px;
+}
+
+/* Contact Form */
+#contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  max-width: 500px;
+}
+
+#contact-form input,
+#contact-form textarea {
+  padding: 0.8rem;
+  border-radius: 8px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  background-color: rgba(26, 26, 26, 0.5);
+  color: rgba(255, 255, 255, 0.87);
+  font-family: inherit;
+}
+
+#contact-form input:focus,
+#contact-form textarea:focus {
+  outline: none;
+  border-color: #ffcc00;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .navbar-links {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+  }
+
+
+}
