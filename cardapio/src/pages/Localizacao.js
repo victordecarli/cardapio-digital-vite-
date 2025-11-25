@@ -7,6 +7,10 @@ export function LocalizacaoPage() {
           Encontre os melhores restaurantes perto de você! Veja abaixo algumas opções selecionadas para sua região.
         </p>
         <div class="localizacao-grid">
+          <div id="loading-restaurantes" class="loading-container">
+            <div class="spinner"></div>
+            <p>Buscando restaurantes próximos...</p>
+          </div>
           <div class="localizacao-card" id="loc-card"></div>    
         </div>
       </div>
