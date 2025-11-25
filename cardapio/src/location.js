@@ -11,7 +11,18 @@ async function geo_success(position) {
   let lat = position.coords.latitude;
   let lon = position.coords.longitude;
 
+  const loadingElement = document.querySelector('#loading-restaurantes');
+  if (loadingElement) {
+    loadingElement.style.display = 'flex';
+
+  }
+
   const restaurantes = await buscarRestaurantes(lat, lon);
+  
+  if (loadingElement) {
+    loadingElement.style.display = 'none';
+  }
+
   const listaLojas = restaurantes.map(rest => {
     const distancia = calcDist(lat, lon, rest.lat, rest.lon); 
     return `
@@ -34,7 +45,21 @@ async function geo_success(position) {
 }
 
 function geo_error(error) {
-  console.error("Erro ao buscar sua localizacao:", error)
+  console.error("Erro ao buscar sua localizacao:", error);
+  
+  const loadingElement = document.querySelector('#loading-restaurantes');
+  if (loadingElement) {
+    loadingElement.style.display = 'none';
+  }
+  
+  const locCard = document.querySelector('#loc-card');
+  if (locCard) {
+    locCard.innerHTML = `
+      <div class="error-message">
+        <p>Não foi possível obter sua localização. Por favor, verifique as permissões do navegador.</p>
+      </div>
+    `;
+  }
 }
 
 async function buscarRestaurantes(lat, lon) {
