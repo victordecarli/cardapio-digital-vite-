@@ -2,14 +2,12 @@ import { Navbar } from './navbar.js';
 import { Footer } from './components/Footer.js';
 import { HomePage } from './pages/Home.js';
 import { CardapioPage } from './pages/Cardapio.js';
-import { SobrePage } from './pages/Sobre.js';
 import { LocalizacaoPage } from './pages/Localizacao.js';
 import { ContatoPage } from './pages/Contato.js';
 
 const routes = {
     '/': { page: HomePage, name: 'home' },
     '/cardapio': { page: CardapioPage, name: 'cardapio' },
-    '/sobre': { page: SobrePage, name: 'sobre' },
     '/localizacao': { page: LocalizacaoPage, name: 'localizacao' },
     '/contato': { page: ContatoPage, name: 'contato' }
 };
