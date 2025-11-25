@@ -8,7 +8,6 @@ export function Navbar(currentPage = 'home') {
             <ul class="navbar-links">
                 <li><a href="#/" class="${currentPage === 'home' ? 'active' : ''}">Início</a></li>
                 <li><a href="#/cardapio" class="${currentPage === 'cardapio' ? 'active' : ''}">Cardápio</a></li>
-                <li><a href="#/sobre" class="${currentPage === 'sobre' ? 'active' : ''}">Sobre</a></li>
                 <li><a href="#/localizacao" class="${currentPage === 'localizacao' ? 'active' : ''}">Localização</a></li>
                 <li><a href="#/contato" class="${currentPage === 'contato' ? 'active' : ''}">Contato</a></li>
             </ul>
